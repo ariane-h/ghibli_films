@@ -6,18 +6,37 @@
         <v-container class="my-5">
 
             <v-row class="mb-3">
-                <v-btn small flat color="grey" @click="sortBy('title')">
-                    <v-icon left small>mdi-folder</v-icon>
-                    <span class="caption text-lowercase">By film, A-Z</span>
-                </v-btn>
-                <v-btn small flat color="grey" @click="sortBy('release_date')">
-                    <v-icon left small>mdi-heart</v-icon>
-                    <span class="caption text-lowercase">By release year</span>
-                </v-btn>
-                <v-btn small flat color="grey" @click="sortBy('rt_score')">
-                    <v-icon left small>mdi-heart</v-icon>
-                    <span class="caption text-lowercase">By tomato score</span>
-                </v-btn>
+
+                <v-tooltip top>
+                    <template v-slot:activator="{on}">
+                        <v-btn small flat color="grey" @click="sortBy('title')" v-on="on">
+                            <v-icon left small>mdi-folder</v-icon>
+                            <span class="caption text-lowercase">By film</span>
+                        </v-btn>
+                    </template>
+                    <span>sort films by name A-Z</span>
+                </v-tooltip>
+
+                 <v-tooltip top>
+                    <template v-slot:activator="{on}">
+                        <v-btn small flat color="grey" @click="sortBy('release_date')" v-on="on">
+                            <v-icon left small>mdi-heart</v-icon>
+                            <span class="caption text-lowercase">By Year</span>
+                        </v-btn>
+                    </template>
+                    <span>Sort films by release date</span>
+                </v-tooltip>
+
+
+                <v-tooltip top>
+                    <template v-slot:activator="{on}">
+                        <v-btn small flat color="grey" @click="sortBy('rt_score')" v-on="on">
+                            <v-icon left small>mdi-heart</v-icon>
+                            <span class="caption text-lowercase">By RT Score</span>
+                        </v-btn>
+                    </template>
+                    <span>sort films by tomato score</span>
+                </v-tooltip>
                
             </v-row>
 
@@ -68,8 +87,8 @@ export default {
             .then(res => res.json())
             .then(ghibliFilms => this.ghibliFilms = ghibliFilms)
         },
-        sortBy(prop){
-            this.ghibliFilms.sort((a, b)=> a[prop] < b[prop] ? -1 : 1)
+        sortBy(parameter){
+            this.ghibliFilms.sort((a, b)=> a[parameter] < b[parameter] ? -1 : 1)
         }
     },
     mounted(){
