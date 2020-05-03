@@ -13,14 +13,14 @@
     </v-app-bar>
 
 
-    <v-navigation-drawer v-model="drawer" app color="#AA857A">
+    <v-navigation-drawer v-model="drawer" app color="grey darken-1">
       <v-list>
         <v-list-item v-for="link in links" :key="link.text" :to="link.route" link>
           <v-list-item-action>
             <v-icon class="white--text" v-text="link.icon"></v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title class="title white--text" v-text="link.text"></v-list-item-title>
+            <v-list-item-title class="bold white--text" v-text="link.text"></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
