@@ -1,25 +1,23 @@
 <template>
-  <v-app>
-    <nav-bar></nav-bar>
-    <v-content class="mx-4 my-4">
-     <router-view></router-view>
-    </v-content>
+	<v-app>
+		<nav-bar></nav-bar>
 
-  </v-app>
+		<v-main class="mx-4 my-4">
+			<router-view></router-view>
+		</v-main>
+	</v-app>
 </template>
 
 <script>
-import NavBar from './components/NavBar.vue'
+import NavBar from "./components/NavBar.vue";
 
 export default {
-  name: 'App',
+	name: "App",
 
-  components: {
-     'nav-bar': NavBar
-  },
+	components: {
+		"nav-bar": NavBar,
+	},
 
-  data: () => ({
-    //
-  }),
+	data: () => ({}),
 };
 </script>
