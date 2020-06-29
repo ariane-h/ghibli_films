@@ -1,24 +1,28 @@
-# ghibli_archive
+# Studio Ghibli Movie Index
 
-## Project setup
-```
+A vue.js web app displaying a sortable list of movies - using the Studio Ghibli API.
+
+
+
+## :art: Features
+
+   * Built with Vue.js, Vuetify, Vue router.
+   * Uses the Studio Ghibli API - https://ghibliapi.herokuapp.com/
+   * Auth: Users can signup, login and logout of the app.
+   * Styling with materialize.css
+
+## :wrench: Setup
+
+Clone this repo, then in the root directory, use npm install to install the dependencies.
+
+```bash
 npm install
 ```
 
-### Compiles and hot-reloads for development
+Once the dependencies have been installed, run the app with the command:
+
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Visit localhost:8080 in your browser to access it.
