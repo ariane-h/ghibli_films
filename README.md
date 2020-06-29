@@ -2,14 +2,13 @@
 
 A vue.js web app displaying a sortable list of movies - using the Studio Ghibli API.
 
+![ghibli movie archive gif](src/assets/ghibli_index_demo.gif)
 
 
 ## :art: Features
 
    * Built with Vue.js, Vuetify, Vue router.
    * Uses the Studio Ghibli API - https://ghibliapi.herokuapp.com/
-   * Auth: Users can signup, login and logout of the app.
-   * Styling with materialize.css
 
 ## :wrench: Setup
 
