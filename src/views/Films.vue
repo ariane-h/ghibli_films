@@ -4,7 +4,7 @@
 			<v-parallax
 				src="@/assets/forest-bridge.jpg"
 				height="300"
-				class="d-flex justify-center"
+				class="d-flex justify-center ma-4"
 			>
 				<v-card
 					flat
@@ -17,7 +17,7 @@
 					</h1>
 				</v-card>
 			</v-parallax>
-			<v-row class="mb-3">
+			<v-row class="mb-3 d-flex justify-center">
 				<v-tooltip top>
 					<template v-slot:activator="{ on }">
 						<v-btn
